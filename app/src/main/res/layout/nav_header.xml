@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:background="@drawable/header_bacground">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glMarginTopHor_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glMarginImageHor_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glMarginTopVertical_header"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@mipmap/ic_launcher"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="@id/glMarginTopVertical_header"
+        app:layout_constraintTop_toTopOf="@id/glMarginTopHor_header" />
+
+    <TextView
+        android:id="@+id/tvNameS"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Ім'я Прізвище"
+        android:textColor="@color/colorMain"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="@id/glMarginTopVertical_header"
+        app:layout_constraintTop_toTopOf="@id/glMarginImageHor_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="emal@com.ua"
+        android:textColor="@color/colorMain"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="@id/glMarginTopVertical_header"
+        app:layout_constraintTop_toBottomOf="@id/tvNameS" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
