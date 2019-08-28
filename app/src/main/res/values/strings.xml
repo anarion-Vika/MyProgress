@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">MyProgres</string>
+    <string name="title_name_area_dialogfr">Назва сфери розвитку:</string>
+    <string name="hint_add_name_area_dialogfr">введiть назву</string>
+    <string name="title_what_useful_dealigfr">Яка мені користь в розвитку цієї сфери?</string>
+    <string name="btn_save_dialogfr">Додати</string>
+    <string name="btn_cancel_dialogfr">Скасувати</string>
+    <string name="list_of_tasks_tasklayout">Список завдань</string>
+    <string name="create_task_dialogtask">Створити Завдання</string>
+    <string name="choose_mate_fortask_dialogTask">Пов\'язана цiль:</string>
+    <string name="description_dialogTask">Короткий опис:</string>
+    <string name="hint_add_description_dialogTask">додайте опис</string>
+    <string name="choose_time_dialogTask">Вибрати час</string>
+    <string name="choose_date_dialogTask">Вибрати дату</string>
+    <string name="autodate_ofcreate_dialogTask">Дата створення</string>
+    <string name="titile_task_dialogtask">Назва завдання</string>
+    <string name="hint_add_name_dialogtask">додати назву</string>
+    <string name="type_task_dialogtask">Вибрати тип завдання</string>
+    <string name="titile_list_area_profile">Список сфер розвитку</string>
 </resources>

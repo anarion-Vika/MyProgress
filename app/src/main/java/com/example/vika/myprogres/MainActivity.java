@@ -2,45 +2,28 @@ package com.example.vika.myprogres;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
-
-    private Toolbar mToolBar;
-    private RecyclerView mRvMenuItem;
-    private LinearLayoutManager layoutManager;
-    private ArrayList<NavigationMenuModel> modelArrayList = new ArrayList<>();
-    private NavigationAdapter navigationAdapter;
+public class MainActivity extends HostActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected Fragment getFragment() {
+        return TaskListFragment.newInstance();
 
-        mToolBar = findViewById(R.id.tbToolBar_main);
-        setSupportActionBar(mToolBar);
-        mRvMenuItem = findViewById(R.id.rvMenuItems);
-        mRvMenuItem.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        mRvMenuItem.setLayoutManager(layoutManager);
-        initArrayList();
-        navigationAdapter = new NavigationAdapter(this, modelArrayList);
-        mRvMenuItem.setAdapter(navigationAdapter);
     }
-    private void initArrayList() {
-        modelArrayList.add(new NavigationMenuModel("Здоров'є",0));
-        modelArrayList.add(new NavigationMenuModel("Розум",0));
-        modelArrayList.add(new NavigationMenuModel("Краса",0));
-        modelArrayList.add(new NavigationMenuModel("Успіх",0));
-        modelArrayList.add(new NavigationMenuModel("Відпочинок та розваги",0));
 
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
 
     }
 }
