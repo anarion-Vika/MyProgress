@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -38,6 +40,8 @@ public class TaskListFragment extends Fragment {
                 dialogTask.show(getFragmentManager(), "dialogTask"));
 
         mIvIconProfile.setOnClickListener(v -> onOpenProfile());
+
+        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 //        mToolBar = findViewById(R.id.tbToolBar_main);
 //        setSupportActionBar(mToolBar);
 
@@ -56,5 +60,6 @@ public class TaskListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.activity_main, container, false);
+
     }
 }

@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glTitleHor_dialogTask"
@@ -13,31 +16,6 @@
         app:layout_constraintGuide_percent="0.1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gNameTaskHor_dialogTask"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gTypeTaskHor_dialogTask"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gButtonBottomHor_dialogTask"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -45,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintGuide_percent="0.05"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -53,7 +31,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9"
+        app:layout_constraintGuide_percent="0.95"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -68,58 +46,70 @@
         app:layout_constraintTop_toTopOf="@id/glTitleHor_dialogTask" />
 
     <View
+        android:id="@+id/vDevider2_dialogArea"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/colorAccent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle_dialogTask" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle_dialogTask" />
 
     <TextView
-        android:id="@+id/tvNameArea"
+        android:id="@+id/tvNameArea_dialogArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:text="@string/title_name_area_dialogfr"
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintLeft_toLeftOf="@id/glTitleVer_dialogTask"
-        app:layout_constraintTop_toTopOf="@id/gNameTaskHor_dialogTask" />
+        app:layout_constraintTop_toBottomOf="@+id/vDevider2_dialogArea" />
 
     <EditText
+        android:id="@+id/etAddArea_dialogArea"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="@string/hint_add_name_area_dialogfr"
         app:layout_constraintLeft_toLeftOf="@id/glTitleVer_dialogTask"
-        app:layout_constraintTop_toBottomOf="@id/tvNameArea"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameArea_dialogArea"
         app:layout_constraintWidth_percent="0.8" />
 
 
     <TextView
-        android:id="@+id/tbWhatUseful"
+        android:id="@+id/tbWhatUseful_dialogArea"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="5dp"
         android:text="@string/title_what_useful_dealigfr"
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintLeft_toLeftOf="@id/glTitleVer_dialogTask"
-        app:layout_constraintTop_toTopOf="@id/gTypeTaskHor_dialogTask"
+        app:layout_constraintTop_toBottomOf="@+id/etAddArea_dialogArea"
         app:layout_constraintWidth_percent="0.8" />
 
     <EditText
+        android:id="@+id/etAddUseful_dialogArea"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="додайте користь розвитку сфери"
         app:layout_constraintLeft_toLeftOf="@id/glTitleVer_dialogTask"
-        app:layout_constraintTop_toBottomOf="@id/tbWhatUseful"
+        app:layout_constraintTop_toBottomOf="@+id/tbWhatUseful_dialogArea"
         app:layout_constraintWidth_percent="0.8" />
 
+        <View
+            android:id="@+id/vDevider3_dialogArea"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@+id/etAddUseful_dialogArea" />
 
     <Button
         android:id="@+id/btnSave_dialogTask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_save_dialogfr"
-        app:layout_constraintBottom_toBottomOf="@id/gButtonBottomHor_dialogTask"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/vDevider3_dialogArea"
         app:layout_constraintRight_toRightOf="@id/glButtonSaveVer_dialogTask"
         app:layout_constraintWidth_percent="0.35" />
 
@@ -128,8 +118,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_cancel_dialogfr"
-        app:layout_constraintBottom_toBottomOf="@id/gButtonBottomHor_dialogTask"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/vDevider3_dialogArea"
         app:layout_constraintLeft_toLeftOf="@id/glTitleVer_dialogTask"
         app:layout_constraintWidth_percent="0.35" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
