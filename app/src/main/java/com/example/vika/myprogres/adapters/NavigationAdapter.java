@@ -1,15 +1,16 @@
-package com.example.vika.myprogres;
+package com.example.vika.myprogres.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.vika.myprogres.R;
+import com.example.vika.myprogres.models.NavigationMenuModel;
 
 import java.util.ArrayList;
 

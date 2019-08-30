@@ -11,6 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.vika.myprogres.adapters.NavigationAdapter;
+import com.example.vika.myprogres.models.NavigationMenuModel;
+
 import java.util.ArrayList;
 
 public class ProfileFragment extends Fragment {

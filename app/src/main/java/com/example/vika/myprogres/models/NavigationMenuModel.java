@@ -1,4 +1,4 @@
-package com.example.vika.myprogres;
+package com.example.vika.myprogres.models;
 
 public class NavigationMenuModel {
     private String titile;
