@@ -1,17 +1,26 @@
 package com.example.vika.myprogres.models;
 
-public class SubGoalModel {
+public class TaskModel {
 
-    private String typeTask, nameSubGoal, relationGoal, dataOfCreate;
+    private String nameTask, typeTask, nameParent, relationGoal, dataOfCreate;
     private int iconGoal, iconTaskStatus;
 
-    public SubGoalModel(String typeTask, String nameSubGoal, String relationGoal, String dataOfCreate, int iconGoal, int iconTaskStatus) {
+    public TaskModel(String nameTask, String typeTask, String nameParent, String relationGoal, String dataOfCreate, int iconGoal, int iconTaskStatus) {
+        this.nameTask = nameTask;
         this.typeTask = typeTask;
-        this.nameSubGoal = nameSubGoal;
+        this.nameParent = nameParent;
         this.relationGoal = relationGoal;
         this.dataOfCreate = dataOfCreate;
         this.iconGoal = iconGoal;
         this.iconTaskStatus = iconTaskStatus;
+    }
+
+    public String getNameTask() {
+        return nameTask;
+    }
+
+    public void setNameTask(String nameTask) {
+        this.nameTask = nameTask;
     }
 
     public String getTypeTask() {
@@ -22,12 +31,12 @@ public class SubGoalModel {
         this.typeTask = typeTask;
     }
 
-    public String getNameSubGoal() {
-        return nameSubGoal;
+    public String getNameParent() {
+        return nameParent;
     }
 
-    public void setNameSubGoal(String nameSubGoal) {
-        this.nameSubGoal = nameSubGoal;
+    public void setNameParent(String nameParent) {
+        this.nameParent = nameParent;
     }
 
     public String getRelationGoal() {

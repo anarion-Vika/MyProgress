@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glTopTitileHor_modelSubGoalTask"
+        android:id="@+id/glTopTitileHor_modelTask"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
@@ -15,7 +15,7 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glLeftVer_modelSubGoalTask"
+        android:id="@+id/glLeftVer_modelTask"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -23,52 +23,53 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvNameSubGoal_modelSubGoalTask"
+        android:id="@+id/tvNameTask_modelTask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Назва завдання для цiлi"
+        android:text="Назва завдання"
         android:textAlignment="center"
         android:textColor="@color/textColorAccent"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/glTopTitileHor_modelSubGoalTask"
+        app:layout_constraintTop_toTopOf="@id/glTopTitileHor_modelTask"
         app:layout_constraintWidth_percent="0.5" />
 
     <TextView
-        android:id="@+id/tvTitleRelativeGoal_modelSubGoalTask"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:text="Пов'язана цiль:"
-        app:layout_constraintHeight_percent="0.03"
-        app:layout_constraintLeft_toRightOf="@+id/ivIconTypeSubGoal_modelSubGoalTask"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameSubGoal_modelSubGoalTask" />
-
-    <TextView
-        android:id="@+id/idNameRelativeSubGoal_modelSubGoalTask"
+        android:id="@+id/tvTitleParentTask_modelTask"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Цiль"
-        app:layout_constraintLeft_toRightOf="@+id/ivIconTypeSubGoal_modelSubGoalTask"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleRelativeGoal_modelSubGoalTask"
-        app:layout_constraintWidth_percent="0.75" />
+        android:text="Пов'язана цiль:"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintLeft_toRightOf="@+id/ivIconTypeTask_modelTask"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameTask_modelTask" />
+
 
     <TextView
-        android:id="@+id/idDateCreate_modelSubGoalTask"
+        android:id="@+id/idNameRelativeArea_modelTask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Пов'язанi сфери:"
+        android:layout_marginTop="5dp"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleParentTask_modelTask"
+        app:layout_constraintLeft_toRightOf="@+id/ivIconTypeTask_modelTask"/>
+    <TextView
+        android:id="@+id/idDateCreate_modelTask"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:text="Дата створення"
         android:textAlignment="textEnd"
-        app:layout_constraintBottom_toBottomOf="@+id/ivIconTypeSubGoal_modelSubGoalTask"
+        app:layout_constraintBottom_toBottomOf="@+id/ivIconTypeTask_modelTask"
         app:layout_constraintHeight_percent="0.03"
-        app:layout_constraintRight_toLeftOf="@+id/ibStateSubGoal_modelSubGoalTask"
+        app:layout_constraintRight_toLeftOf="@+id/ibStateTask_modelTask"
         app:layout_constraintWidth_percent="0.5" />
 
+
     <ImageView
-        android:id="@+id/ivIconTypeSubGoal_modelSubGoalTask"
+        android:id="@+id/ivIconTypeTask_modelTask"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
@@ -76,10 +77,10 @@
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNameSubGoal_modelSubGoalTask"/>
+        app:layout_constraintTop_toBottomOf="@id/tvNameTask_modelTask"/>
 
     <ImageButton
-        android:id="@+id/ibStateSubGoal_modelSubGoalTask"
+        android:id="@+id/ibStateTask_modelTask"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@mipmap/ic_bad_foreground"
@@ -89,11 +90,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvTypeSubGoal_modelSimpleTask"
+        android:id="@+id/tvTypeTask_modelTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Тип завдання"
-        app:layout_constraintBottom_toTopOf="@id/glTopTitileHor_modelSubGoalTask"
-        app:layout_constraintRight_toLeftOf="@+id/ibStateSubGoal_modelSubGoalTask" />
+        app:layout_constraintBottom_toTopOf="@id/glTopTitileHor_modelTask"
+        app:layout_constraintRight_toLeftOf="@+id/ibStateTask_modelTask" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
