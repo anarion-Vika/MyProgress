@@ -27,7 +27,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.menu_model, viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.area_model, viewGroup, false);
         return new ViewHolder(view);
     }
 

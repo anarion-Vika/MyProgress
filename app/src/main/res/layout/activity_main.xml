@@ -15,7 +15,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@drawable/header_bacground"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu">
 
         <LinearLayout
             android:id="@+id/line111"
@@ -23,7 +25,23 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/nav_header" />
+            <!--<include layout="@layout/nav_header" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="Профайл"/>-->
+            <!---->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="Завдання"/>-->
+
+
         </LinearLayout>
 
     </com.google.android.material.navigation.NavigationView>
