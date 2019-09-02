@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vika.myprogres.adapters.NavigationAdapter;
-import com.example.vika.myprogres.models.NavigationMenuModel;
+import com.example.vika.myprogres.models.AreaModel;
 
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class ProfileFragment extends Fragment {
     private DialogArea dialogArea;
 
     private RecyclerView mRvMenuItem;
-    private ArrayList<NavigationMenuModel> modelArrayList = new ArrayList<>();
+    private ArrayList<AreaModel> modelArrayList = new ArrayList<>();
     private NavigationAdapter navigationAdapter;
 
     public static Fragment newInstanse() {
@@ -46,11 +46,11 @@ public class ProfileFragment extends Fragment {
     }
 
     private void initArrayList() {
-        modelArrayList.add(new NavigationMenuModel("Здоров'є", 0));
-        modelArrayList.add(new NavigationMenuModel("Розум", 0));
-        modelArrayList.add(new NavigationMenuModel("Краса", 0));
-        modelArrayList.add(new NavigationMenuModel("Успіх", 0));
-        modelArrayList.add(new NavigationMenuModel("Відпочинок та розваги", 0));
+        modelArrayList.add(new AreaModel("Здоров'є", 0));
+        modelArrayList.add(new AreaModel("Розум", 0));
+        modelArrayList.add(new AreaModel("Краса", 0));
+        modelArrayList.add(new AreaModel("Успіх", 0));
+        modelArrayList.add(new AreaModel("Відпочинок та розваги", 0));
 
     }
 

@@ -10,16 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.vika.myprogres.R;
-import com.example.vika.myprogres.models.NavigationMenuModel;
+import com.example.vika.myprogres.models.AreaModel;
 
 import java.util.ArrayList;
 
 public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.ViewHolder> {
 
     Context context;
-    ArrayList<NavigationMenuModel> arrayList = new ArrayList<>();
+    ArrayList<AreaModel> arrayList = new ArrayList<>();
 
-    public NavigationAdapter(Context context, ArrayList<NavigationMenuModel> arrayList) {
+    public NavigationAdapter(Context context, ArrayList<AreaModel> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
@@ -54,7 +54,7 @@ public class NavigationAdapter extends RecyclerView.Adapter<NavigationAdapter.Vi
 
         }
 
-        public void bind(NavigationMenuModel item) {
+        public void bind(AreaModel item) {
             navTitle.setText(item.getTitile());
             navPoints.setText(String.valueOf(item.getPoints()));
 

@@ -45,6 +45,8 @@ public class TaskListFragment extends Fragment {
 //        mToolBar = findViewById(R.id.tbToolBar_main);
 //        setSupportActionBar(mToolBar);
 
+
+
     }
 
     private void onOpenProfile() {
